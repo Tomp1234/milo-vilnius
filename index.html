@@ -255,7 +255,18 @@
 
   /* Slide 10: Demo transition */
   .slide-demo { align-items: center; justify-items: center; }
+  .slide-demo .demo-block { display: flex; flex-direction: column; align-items: center; gap: 40px; }
   .slide-demo .demo-line { font-family: var(--font-display); font-weight: 700; font-size: clamp(96px, 11vw, 180px); letter-spacing: -0.045em; text-align: center; line-height: 1; }
+  .slide-demo .demo-link {
+    font-family: var(--font-display); font-weight: 600;
+    font-size: clamp(20px, 1.8vw, 28px);
+    color: var(--dim); text-decoration: none;
+    letter-spacing: 0.04em;
+    padding: 8px 4px;
+    border-bottom: 1px solid rgba(240, 244, 255, 0.18);
+    transition: color 200ms ease, border-color 200ms ease;
+  }
+  .slide-demo .demo-link:hover { color: var(--white); border-bottom-color: var(--blue); }
 
   /* Slide 11: Logos */
   .slide-logos { grid-template-rows: auto 1fr; grid-row-gap: 64px; }
@@ -612,7 +623,10 @@
     <!-- 10: Demo transition -->
     <section class="slide slide-demo" data-slide="10">
       <div></div>
-      <div class="demo-line brand-gradient-text">Let me show you.</div>
+      <div class="demo-block">
+        <div class="demo-line brand-gradient-text">Let me show you.</div>
+        <a class="demo-link" href="https://www.milo.ai/" target="_blank" rel="noopener">milo.ai</a>
+      </div>
     </section>
 
     <!-- 11: Logos -->
@@ -913,7 +927,7 @@
     '7':  { title: 'How Milo works', pace: '20 seconds per step · land the kicker last', land: 'Three steps. Ask, reason, answer. The "and an action" line in step 3 is the differentiator. Most BI tools stop at the chart. Milo can do the next thing too. End on the kicker: "Other tools optimise the query. Milo gives you the trust." That\'s the philosophy line. Quotable.', qa: '"How does it understand my schema?" → "We map it once during setup, about a week." "What context does it use?" → "Slack threads, docs, tickets, your warehouse." "Does it run agents?" → "Yes. Appendix has the architecture."' },
     '8':  { title: 'What people ask', pace: 'Read each one slowly · pause between · 60 seconds total', land: 'Three real questions, three real answers. Each story targets a different person in this room — risk lead, marketing lead, and a Lithuanian operator. The first lands hardest with BetGames/7Bet types. The middle is for Maxima/Coolr. The third is for Frontmark.', qa: '"Are these your customers?" → "Composite examples drawn from active customer behaviour." Don\'t name a single customer for any single story unless they\'re here.' },
     '9':  { title: 'BetGames case study', pace: 'SLOW DOWN · let each number breathe · land the punchline with eye contact', land: 'BetGames started with an analytics pain. 12 months later they\'d cut a team and saved €162K. The punchline at the bottom — "they didn\'t hire more analysts, they cut the team" — is the line you want them to leave with. Don\'t soften it. Don\'t apologise for it. This is the most concrete ROI moment in the deck.', qa: '"Are these numbers public?" → "BetGames is a public reference customer. Aivaras (Head of Risk) is willing to take a call." "Will my numbers look the same?" → "Depends on your starting point. We size it during the POC." "Did they really fire the RevOps team?" → "Disbanded — re-deployed two FTE elsewhere. The role is automatable."' },
-    '10': { title: 'Demo handoff', pace: 'Three words · walk to laptop', land: 'Don\'t speak again until the demo loads. Resist the urge to fill silence.', qa: '' },
+    '10': { title: 'Demo handoff', pace: 'Three words · walk to laptop · play the video at milo.ai', land: 'Don\'t speak again until the video/demo loads. Resist the urge to fill silence. The milo.ai link is clickable on the slide — you can navigate from there in Chrome, or alt-tab to your prepared tab.', qa: '' },
     '11': { title: 'Customer logos', pace: 'Pause · let the room read · 15 seconds max', land: 'Mention Kellogg\'s by name — heaviest brand in the room. "Yes, that Kellogg\'s." Don\'t oversell. Move on.', qa: '"Are these all live?" → "These are companies actively using Milo today, in production or pilot."' },
     '12': { title: 'Customer voices', pace: 'Don\'t read aloud · 8–10 seconds of silence', land: 'Three different reasons people bought Milo. None mentioned analytics. Alex = relatable UK COO. Ben = security/IP angle. Greta = speed.', qa: '' },
     '13': { title: 'Security · the recognition lever', pace: 'Open with the provocation · pause · then both frame lines · land the anchor with eye contact', land: 'Lidl, Berlin Chemie, Numa have already had this conversation internally. The lever isn\'t "we\'re certified" — it\'s "your people are already doing it and you don\'t know." Open with: "Your people are already using ChatGPT with your data." Then the two frame lines: "ChatGPT-for-work? Extra steps with a data leak attached." and "Copilot? It just... regurgitates." Both are quotable. Then the certifications close it as relief.', qa: '"What about [specific cert]?" → If we have it, say so. If not: "On the roadmap." "Where exactly is data hosted?" → "Frankfurt and Dublin." "What about Anthropic?" → "Inference goes to Anthropic. Zero retention contractual. We pass the question, never the rows." "What about Copilot?" → "It indexes your stuff. Fine for general productivity. Not for analytical reasoning over your data." Appendix A3 (architecture) is ready if a CTO probes.' },
