@@ -236,7 +236,7 @@
   .slide-stories { grid-template-rows: auto 1fr; grid-row-gap: 56px; }
   .slide-stories .head h2 { font-family: var(--font-display); font-weight: 700; font-size: clamp(48px, 4.8vw, 72px); letter-spacing: -0.035em; }
   .slide-stories .head .body-lg { margin-top: 16px; max-width: 70%; }
-  .stories-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 48px; align-self: center; width: 100%; max-width: 1700px; }
+  .stories-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 36px; align-self: center; width: 100%; max-width: 1780px; }
   .story {
     display: flex; flex-direction: column; gap: 18px;
     border-left: 2px solid;
@@ -244,8 +244,8 @@
     padding: 4px 0 4px 24px;
   }
   .story .role { font-family: var(--font-body); font-size: 14px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.18em; color: var(--dim); }
-  .story .question { font-family: var(--font-display); font-weight: 600; font-size: clamp(22px, 1.9vw, 30px); letter-spacing: -0.02em; line-height: 1.25; color: var(--white); }
-  .story .answer { font-family: var(--font-body); font-size: clamp(15px, 1.15vw, 19px); line-height: 1.55; color: var(--dim); }
+  .story .question { font-family: var(--font-display); font-weight: 600; font-size: clamp(19px, 1.55vw, 25px); letter-spacing: -0.02em; line-height: 1.25; color: var(--white); }
+  .story .answer { font-family: var(--font-body); font-size: clamp(13px, 1vw, 17px); line-height: 1.5; color: var(--dim); }
   .story .answer strong { color: var(--white); font-weight: 500; }
 
   /* Slide 9: Case study (BetGames) */
@@ -932,7 +932,7 @@
       </div>
       <div class="audience-ask">
         <div class="ask-label">Ask the room</div>
-        <div class="ask-q">How many of you find your current data too static?</div>
+        <div class="ask-q">How many of you would find it interesting to talk to your data?</div>
       </div>
     </section>
 
@@ -1022,7 +1022,6 @@
         <span class="cert-pill">SOC 2 Type II</span>
         <span class="cert-pill">GDPR</span>
         <span class="cert-pill">EU-hosted · Frankfurt + Dublin</span>
-        <span class="cert-pill">Zero retention with Anthropic</span>
       </div>
       <div class="sec-mini-arch">
         <svg viewBox="0 0 800 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -1046,7 +1045,7 @@
           <text x="497" y="64" text-anchor="middle" fill="rgba(240,244,255,0.55)" font-family="Inter, sans-serif" font-size="10">Question only</text>
 
           <rect x="568" y="56" width="180" height="36" rx="8" fill="rgba(139,92,246,0.14)" stroke="#8B5CF6" stroke-width="1.2"/>
-          <text x="658" y="80" text-anchor="middle" fill="#F0F4FF" font-family="Inter Tight, sans-serif" font-weight="600" font-size="14">Anthropic · zero retention</text>
+          <text x="658" y="80" text-anchor="middle" fill="#F0F4FF" font-family="Inter Tight, sans-serif" font-weight="600" font-size="14">AI reasoning model</text>
         </svg>
       </div>
       <div class="audience-ask">
@@ -1311,11 +1310,11 @@
     '7':  { title: 'Clarity · goodbye static dashboards', pace: 'Read each line slowly · let "Just ask." sit', land: 'Three beats. "Goodbye, static dashboards." Pause. "Goodbye, slow data." Pause. Then the resolve: "Just ask." This is the line that tells them what Milo IS — in five seconds. The rest of the deck proves it.', qa: '' },
     '8':  { title: 'ACT 2 · Greta · ASK THE ROOM', pace: 'Read the quote · ask the show-of-hands · pause', land: '"This is Greta. She runs analytics at Perlas. Six months ago she was the person being asked the questions nobody could answer in the room. Now her team answers them live." Then ask: "Who\'s been in a meeting this week where the question that mattered didn\'t get answered?" Hands go up. Acknowledge them. "Right. So you know exactly what Greta means."', qa: '' },
     '9':  { title: 'ACT 3 · Product · the answer with the why', pace: 'Headline · sub · point to the screenshot', land: '"You ask in plain Lithuanian, plain English, plain whatever. Milo reasons over your warehouse and answers — with the why behind the number. Not just the number." Don\'t over-explain. The screenshot does the work.', qa: '"Where does the data live?" → "On your infrastructure." "Does it work in Lithuanian?" → "Yes — 30+ languages."' },
-    '10': { title: 'ACT 3 · Channels · ASK THE ROOM', pace: 'Headline · pills · pause · ask the question', land: '"Milo lives where your team already lives. Slack. WhatsApp. Teams. Email. No new tool. No dashboard to log into. Milo answers in the channel where the question was asked." Then the ask: "How many of you find your current data too static?" Hands go up. That\'s the moment the room admits the dashboard isn\'t working for them.', qa: '"Does it work in Teams?" → "Yes." "Email?" → "Yes — email a question, get an answer back in your inbox."' },
+    '10': { title: 'ACT 3 · Channels · ASK THE ROOM', pace: 'Headline · pills · pause · ask the question', land: '"Milo lives where your team already lives. Slack. WhatsApp. Teams. Email. No new tool. No dashboard to log into. Milo answers in the channel where the question was asked." Then the ask: "How many of you would find it interesting to talk to your data?" Hands go up. That\'s the moment the room admits the dashboard isn\'t working for them.', qa: '"Does it work in Teams?" → "Yes." "Email?" → "Yes — email a question, get an answer back in your inbox."' },
     '11': { title: 'Let me show you · DEMO', pace: 'Three words · walk to the laptop · play the demo at milo.ai', land: 'Don\'t speak again until the demo loads. Resist the urge to fill silence. The milo.ai link is clickable on the slide.', qa: '' },
     '12': { title: 'ACT 4 · BetGames', pace: 'Eyebrow · headline (slow) · sub · stats', land: '"BetGames is a Lithuanian gaming company. Same problem you have. Their commercial team would ask a question on Monday and get an answer on Friday — if they got one at all." "Six months in: four days became one hour. They didn\'t fire their analysts. They moved them onto the work that actually pays — campaigns, pricing, retention. The team that used to make dashboards now makes money." "€162K back in the budget. In year one."', qa: '"Are these numbers public?" → "BetGames is a public reference customer." "Will my numbers look the same?" → "Depends on your starting point. We size it during the POC."' },
     '13': { title: 'And they\'re not alone · logos', pace: 'Pause · let the room read · 15 seconds max', land: 'Mention Kellogg\'s by name — heaviest brand in the room. "Yes, that Kellogg\'s." Don\'t oversell. Move on.', qa: '"Are these all live?" → "These are companies actively using Milo today, in production or pilot."' },
-    '14': { title: 'ACT 5 · Security · ASK THE ROOM FIRST', pace: 'ASK the question before reading the slide', land: 'Ask first: "How many of you have pasted company data into ChatGPT this month?" (some hands) "And how many of you would notice if someone on your team had?" (fewer hands. The gap is the sell.) Then: "Your people are already trying to fix this. They are pasting your numbers into a chat window on their personal account. They are doing it because the alternative is waiting ten days." Then: "Milo is the safe way to do what they are already doing. EU-hosted. Your data never moves. The question goes out — the rows never do."', qa: '"Where exactly is data hosted?" → "Frankfurt and Dublin." "What about Anthropic?" → "Inference only. Zero retention contractual."' },
+    '14': { title: 'ACT 5 · Security · ASK THE ROOM FIRST', pace: 'ASK the question before reading the slide', land: 'Ask first: "How many of you have pasted company data into ChatGPT this month?" (some hands) "And how many of you would notice if someone on your team had?" (fewer hands. The gap is the sell.) Then: "Your people are already trying to fix this. They are pasting your numbers into a chat window on their personal account. They are doing it because the alternative is waiting ten days." Then: "Milo is the safe way to do what they are already doing. EU-hosted. Your data never moves. The question goes out — the rows never do."', qa: '"Where exactly is data hosted?" → "Frankfurt and Dublin." "What about the model provider?" → "Inference goes to a reasoning model. Zero retention contractual. Only the question crosses the boundary — never the rows."' },
     '15': { title: 'ACT 6 · €1,500 to find out', pace: 'Read the offer · don\'t soften the walk-away line', land: '"Here\'s the offer. €1,500 to find out if Milo answers your real questions on your real data. Thirty days. If it doesn\'t land, you walk. No commitment." "If it does land, it\'s €2,500 a month. Flat. Every seat in your business. For less than the cost of one analyst, your whole team gets answers in seconds."', qa: '"Discount?" → "No. Walk away if it doesn\'t work for you."' },
     '16': { title: 'Tonight · FrontIT', pace: 'Direct ask · eye contact', land: '"You don\'t have to decide tonight. But you can start tonight." "FrontIT — our partner here in Vilnius — will look at your data, free, and tell you what\'s worth doing with it. No commitment. No deck. Just a real read on what Milo would answer for you." "I\'m here all evening. Find me, find the FrontIT team, and let\'s set it up."', qa: '' },
     '17': { title: 'Questions.', pace: 'Wait. Don\'t answer your own.', land: 'Open the room. Let silence do work. First question is the hardest — once one person breaks it, others follow. Logos along the bottom keep credibility on screen while they think.', qa: 'Hardest expected: "What\'s your biggest deployment?" "Can we self-host?" "What happens if the model gets it wrong?"' }
